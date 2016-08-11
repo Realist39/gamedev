@@ -7,12 +7,13 @@ if (!empty($_POST['auth'])) {
               $login = str_replace("'","\'",$_POST['login']); 
               $password = str_replace("'","\'",$_POST['password']); 
               # Проверяется существует ли запись в БД с получеными данными 
-              $sql = $db->q("SELECT * FROM quiz.`users` WHERE `login`='".$login."' AND `password`=MD5('".$password."')"); 
+                    $sql = $db->q("SELECT * FROM `users` WHERE `login`='".$login."' AND `password`=('".$password."')");
+               
               if (mysql_num_rows($sql) == 1) { # Если существует, то сохраняется сессия и переадресовывает в игру 
-			  $err = '<div style="text-align: center;color: red;">Пися</div>';
-               #$row = mysql_fetch_array($sql); 
-               #$_SESSION['user_id'] = $row['id']; 
-               #header("Location: game.php"); 
+			  #$err = '<div style="text-align: center;color: red;">Пися</div>';
+               $row = mysql_fetch_array($sql); 
+               $_SESSION['new_session'] = $row['id_user']; 
+               header("Location: lobby.php"); 
               } else { # Если нет, то выводится ошибка 
                $err = '<div style="text-align: center;color: red;">Игрок не найден</div>'; 
               } 

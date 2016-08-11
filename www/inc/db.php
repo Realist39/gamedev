@@ -1,52 +1,52 @@
 <?php
 /*
-              * Класс базы данных
+              * РљР»Р°СЃСЃ Р±Р°Р·С‹ РґР°РЅРЅС‹С…
               *
               */
 
 class db {
                            
-              public $time_load_page; # Время выполнения скрипта
-              public $mem_start; # Потребление памяти при выполнении скрипта
-              public $mem_pek_start; # Пиковое потребление памяти при выполнении скрипта
+              public $time_load_page; # Р’СЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ СЃРєСЂРёРїС‚Р°
+              public $mem_start; # РџРѕС‚СЂРµР±Р»РµРЅРёРµ РїР°РјСЏС‚Рё РїСЂРё РІС‹РїРѕР»РЅРµРЅРёРё СЃРєСЂРёРїС‚Р°
+              public $mem_pek_start; # РџРёРєРѕРІРѕРµ РїРѕС‚СЂРµР±Р»РµРЅРёРµ РїР°РјСЏС‚Рё РїСЂРё РІС‹РїРѕР»РЅРµРЅРёРё СЃРєСЂРёРїС‚Р°
                            
-              const DB_HOST = "localhost"; # mysql хост
-              const DB_USER = "root"; # mysql пользователь
-              const DB_PASS = ""; # mysql пароль
-              const DB_NAME = "quiz"; # БД mysql
+              const DB_HOST = "localhost"; # mysql С…РѕСЃС‚
+              const DB_USER = "root"; # mysql РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ
+              const DB_PASS = ""; # mysql РїР°СЂРѕР»СЊ
+              const DB_NAME = "quiz"; # Р‘Р” mysql
                            
-              private $counter_mysql = 0; # Количество запросов
-              private $timer_mysql = 0; # Общее время запросов
-                 private $mysql_query_desc; # Список запросов
-              # Соединение с БД и запуск класса
+              private $counter_mysql = 0; # РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїСЂРѕСЃРѕРІ
+              private $timer_mysql = 0; # РћР±С‰РµРµ РІСЂРµРјСЏ Р·Р°РїСЂРѕСЃРѕРІ
+                 private $mysql_query_desc; # РЎРїРёСЃРѕРє Р·Р°РїСЂРѕСЃРѕРІ
+              # РЎРѕРµРґРёРЅРµРЅРёРµ СЃ Р‘Р” Рё Р·Р°РїСѓСЃРє РєР»Р°СЃСЃР°
               public function __construct() {
-               $connect = mysql_connect(self::DB_HOST, self::DB_USER, self::DB_PASS) or die("База данных ушла в себя");
-               mysql_select_db(self::DB_NAME,$connect) or die("Невозможно найти БД");
-               # Установка языка записи в БД
+               $connect = mysql_connect(self::DB_HOST, self::DB_USER, self::DB_PASS) or die("Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓС€Р»Р° РІ СЃРµР±СЏ");
+               mysql_select_db(self::DB_NAME,$connect) or die("РќРµРІРѕР·РјРѕР¶РЅРѕ РЅР°Р№С‚Рё Р‘Р”");
+               # РЈСЃС‚Р°РЅРѕРІРєР° СЏР·С‹РєР° Р·Р°РїРёСЃРё РІ Р‘Р”
                mysql_query("SET NAMES utf8");
               }
                            
-              # Считаются запросы
-              # @query:String - mysql запрос
+              # РЎС‡РёС‚Р°СЋС‚СЃСЏ Р·Р°РїСЂРѕСЃС‹
+              # @query:String - mysql Р·Р°РїСЂРѕСЃ
               public function q($query)              
               {
-               $this->mysql_query_desc[] = $query; # Добавляется запрос в список запросов
-               $this->counter_mysql++; # Увеличивается количество запросов
-               # Считается время выполнения запроса
+               $this->mysql_query_desc[] = $query; # Р”РѕР±Р°РІР»СЏРµС‚СЃСЏ Р·Р°РїСЂРѕСЃ РІ СЃРїРёСЃРѕРє Р·Р°РїСЂРѕСЃРѕРІ
+               $this->counter_mysql++; # РЈРІРµР»РёС‡РёРІР°РµС‚СЃСЏ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїСЂРѕСЃРѕРІ
+               # РЎС‡РёС‚Р°РµС‚СЃСЏ РІСЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РїСЂРѕСЃР°
                $start = microtime(true);
                $result = mysql_query($query);
                $this->timer_mysql += microtime(true)-$start;
-               # Возвращается выполненый mysql запрос
+               # Р’РѕР·РІСЂР°С‰Р°РµС‚СЃСЏ РІС‹РїРѕР»РЅРµРЅС‹Р№ mysql Р·Р°РїСЂРѕСЃ
                return $result;
               }
-              # Выводится отладочная инфа
+              # Р’С‹РІРѕРґРёС‚СЃСЏ РѕС‚Р»Р°РґРѕС‡РЅР°СЏ РёРЅС„Р°
               public function debug()
                  {
                $txt = "";
-               $txt .= "Скрипт выполнен за ".$this->time_load_page." сек.<br>\n";
-               $txt .= "Количество запросов к БД: ".$this->counter_mysql."<br>\n";
-               $txt .= "Время запросов к БД: ".round($this->timer_mysql,4)."<br>\n";
-               $txt .= "Список запросов<br>\n<div>";
+               $txt .= "РЎРєСЂРёРїС‚ РІС‹РїРѕР»РЅРµРЅ Р·Р° ".$this->time_load_page." СЃРµРє.<br>\n";
+               $txt .= "РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїСЂРѕСЃРѕРІ Рє Р‘Р”: ".$this->counter_mysql."<br>\n";
+               $txt .= "Р’СЂРµРјСЏ Р·Р°РїСЂРѕСЃРѕРІ Рє Р‘Р”: ".round($this->timer_mysql,4)."<br>\n";
+               $txt .= "РЎРїРёСЃРѕРє Р·Р°РїСЂРѕСЃРѕРІ<br>\n<div>";
                $len = sizeof($this->mysql_query_desc);
                for ($i=0;$i<$len;$i++) {
                 $txt .= "[".($i+1)."] ".$this->mysql_query_desc[$i]."<br>\n";
@@ -59,7 +59,7 @@ class db {
                  $type = "Mb";
                  $num = round($this->mem_start/1024/1024, 2);
                 }
-                $txt .= "Потребление памяти: ".$num.$type." <br>\n";
+                $txt .= "РџРѕС‚СЂРµР±Р»РµРЅРёРµ РїР°РјСЏС‚Рё: ".$num.$type." <br>\n";
                }
                             
                return $txt;
