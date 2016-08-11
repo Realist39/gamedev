@@ -1,14 +1,16 @@
 <?php 
-$User = mysql_fetch_array($db->q("SELECT * FROM `users` WHERE `id_user`='".$_SESSION['new_session']."'")); 
+	$count_questions = mysql_fetch_array($db->q("SELECT count(*) as cnt FROM questions;"));
+	$ans = rand(1, $count_questions['cnt']);
+	$question = mysql_fetch_array($db->q("SELECT * FROM questions WHERE id_question=".$ans.""));
 ?> 
 <table> 
 <tr> 
-      <td>Игрок: </td><td><b><?php echo $User['login']; ?></b></td> 
+      <td>Вопрос: </td><td><b><?php echo $question['text']; ?></b></td> 
 </tr> 
 <tr> 
-      <td>Жизни: </td><td><?php echo $User['life']; ?>/<?php echo $User['mlife']; ?></td> 
+      <td>Ответ: </td><td><?php echo $User['life']; ?>/<?php echo $User['mlife']; ?></td> 
 </tr> 
 <tr> 
-      <td>Деньги: </td><td><?php echo $User['money']; ?></td> 
+      <td>Ответ: </td><td><?php echo $ans ?></td> 
 </tr> 
 </table>

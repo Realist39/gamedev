@@ -19,7 +19,7 @@ if ($a == 'exit') {
 # Читается url и происходит сравнение со словами в массиве 
 # Если сравнение не найдено, автоматически подключается главная игровая страница 
 # В другом случае подключается найденый модуль 
-$modules = array('main','maps','shop','battle','post','trade'); 
+$modules = array('start','rating','settings','exit'); 
 
 $module_find = false; 
 foreach($modules as $val) { 
