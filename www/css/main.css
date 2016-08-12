@@ -1,3 +1,4 @@
+
 /* Header */
 .page-header {
     min-height: 50px;
@@ -83,7 +84,7 @@ footer.page-footer {
 }
 /*Main-page*/
 main .question {
-	
+
 margin: 0 auto;
 margin-top:20px;
 margin-bottom:15px;
@@ -99,6 +100,25 @@ max-width:400px;
 	text-align: center;
 padding:10px;
 }
+.site_info{
+
+margin: 0 auto;
+margin-top:20px;
+margin-bottom:15px;
+display: flex;
+align-items: center;
+justify-content: center;
+min-height:100px;
+min-width:50px;
+ border-radius: 5px;
+    box-shadow: 1px 1px 3px #999999;
+	background: lightyellow;
+	text-align: center;
+padding:10px;
+font-size:15pt;
+}
+
+
 .buttons input {
 	 display: inline-block;
     width: 250px;

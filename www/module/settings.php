@@ -27,9 +27,8 @@ $User = mysql_fetch_array($db->q("SELECT * FROM `users` WHERE `id_user`='".$_SES
 <p>
 <input type="text" name="new_pass" placeholder="Введите новый пароль">
 </div>
-<div class="save_settings1">
 <input class="save_settings" type="submit"  value="Сохранить изменения" name="save_settings">
-</div>
+
 </form>
 </main>
 </body>
