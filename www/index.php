@@ -34,7 +34,7 @@ if (!empty($_POST['auth'])) {
                  Логин: <input type="text" name="login" placeholder="Введите Логин" />              
                  Пароль: <input type="password" name="password" placeholder="Введите пароль" />   
 				<div class="buttons"> 
-                 <input type="submit" value="Войти" name="auth" />
+                 <input type="submit" value="Войти" name="auth"/>
 				 <input type="reset" value="Сбросить" name="reset" />
 				</div>
                 </form> 

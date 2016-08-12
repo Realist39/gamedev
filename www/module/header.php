@@ -22,17 +22,5 @@
                 </ul>
             </nav>
         </header>
-		<!--
-       <table> 
-       <tr> 
-        <td valign="top" style="width:120px;display:block;"> 
-         <table> 
-         <tr><td><a href="?a=start">Начать игру</a></td></tr> 
-         <tr><td><a href="?a=rating">Рейтинг </a></td></tr> 
-         <tr><td><a href="?a=settings">Настройки</a></td></tr> 
-         <tr><td><a href="?a=exit">Выход</a></td></tr> 
-         </table> 
-        </td> 
-		-->
-        <td valign="top">
+       
 		
