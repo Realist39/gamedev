@@ -81,3 +81,31 @@ footer.page-footer {
     padding-top: 20px;
     font-size: 12px;
 }
+/*Main-page*/
+main .question {
+	
+margin: 0 auto;
+margin-top:20px;
+display: flex;
+align-items: center;
+justify-content: center;
+min-height:100px;
+min-width:50px;
+max-width:400px;
+ border-radius: 5px;
+    box-shadow: 1px 1px 3px #999999;
+	background: lightyellow;
+	text-align: center;
+padding:10px;
+}
+.buttons input {
+	 display: inline-block;
+    width: 250px;
+    height: 100px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #999999;
+	background: lightyellow;
+	text-align: center;
+	
+}

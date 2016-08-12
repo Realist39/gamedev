@@ -13,17 +13,6 @@ form {
     box-shadow: 0 0 10px #ccc;
 }
 
-fieldset {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #34495e;
-    border-radius: 5px;
-}
-
-fieldset legend {
-    color: #34495e;
-}
-
 label {
     display: block;
     margin-bottom: 5px;
@@ -75,11 +64,7 @@ input[type="reset"] {
 input[disabled] {
     background-color: #ebebe3;
 }
-.buttons {
-    margin-top: 10px;
-    text-align: center;
-	
-}
+
 .druz {
 	display:block;
 position:absolute;
