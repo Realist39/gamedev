@@ -7,10 +7,10 @@
     
     background-color: #f1c40f;
     background-image: 
-        linear-gradient(45deg, transparent 50%, white 50%),
-        linear-gradient(-45deg, transparent 50%, white 50%),
-        linear-gradient(135deg, transparent 50%, #2c3e50 50%),
-        linear-gradient(-135deg, transparent 50%, #2c3e50 50%);
+	linear-gradient(45deg, transparent 50%, white 50%),
+	linear-gradient(-45deg, transparent 50%, white 50%),
+	linear-gradient(135deg, transparent 50%, #2c3e50 50%),
+	linear-gradient(-135deg, transparent 50%, #2c3e50 50%);
     background-repeat: repeat-x;
     background-position: 0 0, 0 0, 0 100%, 0 100%;
     background-size: 10px 12px;
@@ -53,8 +53,8 @@ footer.page-footer {
     font-size: 14px;
     color: black;
     background-color: #f1c40f;
-   
-        
+	
+	
     
     
 }
@@ -84,43 +84,43 @@ footer.page-footer {
 }
 /*Main-page*/
 main .question {
-
-margin: 0 auto;
-margin-top:20px;
-margin-bottom:15px;
-display: flex;
-align-items: center;
-justify-content: center;
-min-height:100px;
-min-width:50px;
-max-width:400px;
- border-radius: 5px;
+	
+	margin: 0 auto;
+	margin-top:20px;
+	margin-bottom:15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height:100px;
+	min-width:50px;
+	max-width:400px;
+	border-radius: 5px;
     box-shadow: 1px 1px 3px #999999;
 	background: lightyellow;
 	text-align: center;
-padding:10px;
+	padding:10px;
 }
 .site_info{
-
-margin: 0 auto;
-margin-top:20px;
-margin-bottom:15px;
-display: flex;
-align-items: center;
-justify-content: center;
-min-height:100px;
-min-width:50px;
- border-radius: 5px;
+	
+	margin: 0 auto;
+	margin-top:20px;
+	margin-bottom:15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height:100px;
+	min-width:50px;
+	border-radius: 5px;
     box-shadow: 1px 1px 3px #999999;
 	background: lightyellow;
 	text-align: center;
-padding:10px;
-font-size:15pt;
+	padding:10px;
+	font-size:15pt;
 }
 
 
 .buttons input {
-	 display: inline-block;
+	display: inline-block;
     width: 250px;
     height: 100px;
     margin: 5px;
@@ -136,47 +136,47 @@ font-size:15pt;
 .settings {
 	
 	margin: 0 auto;
-margin-top:20px;
-margin-bottom:15px;
-display: flex;
-align-items: center;
-justify-content: center;
-height:100px;
-width:300px;
- border-radius: 5px;
+	margin-top:20px;
+	margin-bottom:15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height:100px;
+	width:300px;
+	border-radius: 5px;
     box-shadow: 1px 1px 3px #999999;
 	background: lightyellow;
 	text-align: center;
-padding:10px;
+	padding:10px;
 }
 .settings td {
-	padding:5px;	
+padding:5px;	
 }
 .change {
-	display:inline-block;
-	top:13%;
-	left:61%;
+display:inline-block;
+top:13%;
+left:61%;
 position: absolute;
 height:100px;
 min-width:100px;
- border-radius: 5px;
-    box-shadow: 1px 1px 3px #999999;
-	background: lightyellow;
-	text-align: center;
+border-radius: 5px;
+box-shadow: 1px 1px 3px #999999;
+background: lightyellow;
+text-align: center;
 padding:10px;
 }
 .save_settings {
-	
-	margin: 0 auto;
+
+margin: 0 auto;
 margin-bottom:15px;
 display: flex;
 align-items: center;
 justify-content: center;
 min-height:10px;
 min-width:10px;
- border-radius: 5px;
-    box-shadow: 1px 1px 3px #999999;
-	background: lightyellow;
-	text-align: center;
+border-radius: 5px;
+box-shadow: 1px 1px 3px #999999;
+background: lightyellow;
+text-align: center;
 padding:10px;
 }
