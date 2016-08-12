@@ -22,24 +22,30 @@ if (!empty($_POST['auth'])) {
 <!DOCTYPE html> 
 <html> 
                  <head> 
-                     <title>Браузерная игра</title> 
+                     <title>Браузерная игра Москали</title> 
                      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-					 <link rel="stylesheet" href="/css/main.css">
+					 <link rel="stylesheet" href="/css/entry.css">
                  </head> 
                  <body> 
                <?php echo $err; # Вывод ошибки ?> 
                      <div style="text-align:center;">
-				<div class="Header-site">
+				<div class="game_name"><p>Викторина: Москали</p></div>
                 <form method="post"> 
                  Логин: <input type="text" name="login" placeholder="Введите Логин" />              
                  Пароль: <input type="password" name="password" placeholder="Введите пароль" />   
 				<div class="buttons"> 
                  <input type="submit" value="Войти" name="auth" />
 				 <input type="reset" value="Сбросить" name="reset" />
-				<div>
+				</div>
                 </form> 
                 <br> 
-                <a href="reg.php">Регистрация</a> 
-               </div> 
+                <a href="reg.php">Регистрация</a>
+				<div class="druz">
+				<img src="/assets/images/aleksandr-druz02.jpg" width=70% height=70%>
+				</div>
+				<div class="vasser"><img src="/assets/images/vasserman_2.jpg" width=60% height=60%></div>
+				
+              
+			   
                  </body> 
 </html>
